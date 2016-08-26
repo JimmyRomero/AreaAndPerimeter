@@ -1,19 +1,27 @@
 /**
-* Created by JimmyRomero on 8/24/2016.
-*/
+ * Created by JimmyRomero on 8/24/2016.
+ */
 public class Square extends Shape {
 
-    double side;
+    private final double side;
 
-    public Square(double side){
+    public Square(double side) {
         this.side = side;
-
     }
 
-    public double calculateArea(){
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public double calculateArea() {
         return side * side;
     }
-    public double calculatePerimeter(){
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public double calculatePerimeter() {
         return 4 * side;
     }
 }

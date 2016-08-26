@@ -1,25 +1,33 @@
+import org.junit.Before;
 import org.junit.Test;
 
-import static junit.framework.TestCase.assertEquals;
-
+import static org.junit.Assert.assertEquals;
 
 /**
- * Created by JimmyRomero on 8/25/2016.
+ * Test for Square {@link Square}
  */
-public class testSquare {
-    Shape square;
 
-    @Test
-    public void test_calculateArea_square(){
-        square = new Square(4);
-        double expectedResult = 16;
-        assertEquals(expectedResult, square.calculateArea());
+public class testSquare {
+
+    public static final double DELTA = 0.001;
+
+    private Shape shape;
+
+    @Before
+    public void setUp() {
+        int side = 4;
+        shape = new Square(side);
     }
 
     @Test
-    public void test_calculatePerimeter_square(){
-        square = new Square(4);
-        double expectedResult = 16;
-        assertEquals(expectedResult, square.calculatePerimeter());
+    public void test_calculateArea_square() {
+        final double expectedResult = 16;
+        assertEquals(expectedResult, shape.calculateArea(), DELTA);
+    }
+
+    @Test
+    public void test_calculatePerimeter_square() {
+        final double expectedResult = 16;
+        assertEquals(expectedResult, shape.calculatePerimeter(), DELTA);
     }
 }
