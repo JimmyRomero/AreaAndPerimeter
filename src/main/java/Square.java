@@ -1,7 +1,7 @@
 /**
  * Created by JimmyRomero on 8/24/2016.
  */
-public class Square extends Shape {
+public class Square implements Shape {
 
     private final double side;
 
@@ -14,7 +14,7 @@ public class Square extends Shape {
      */
     @Override
     public double calculateArea() {
-        return side * side;
+        return this.side * this.side;
     }
 
     /**
@@ -22,6 +22,6 @@ public class Square extends Shape {
      */
     @Override
     public double calculatePerimeter() {
-        return 4 * side;
+        return 4 * this.side;
     }
 }

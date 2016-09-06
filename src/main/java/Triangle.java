@@ -1,7 +1,7 @@
 /**
  * Created by JimmyRomero on 8/25/2016.
  */
-public class Triangle extends Shape {
+public class Triangle implements Shape {
 
     private final double base, high, side;
 
@@ -16,7 +16,7 @@ public class Triangle extends Shape {
      */
     @Override
     public double calculateArea() {
-        return (base * high) / 2;
+        return (this.base * this.high) / 2;
     }
 
     /**
@@ -24,6 +24,6 @@ public class Triangle extends Shape {
      */
     @Override
     public double calculatePerimeter() {
-        return (side + side + side);
+        return (this.side + this.side + this.side);
     }
 }

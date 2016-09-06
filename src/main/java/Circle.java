@@ -1,7 +1,7 @@
 /**
  * Calculates the area and perimeter
  */
-public class Circle extends Shape {
+public class Circle implements Shape {
 
     private final double radio;
 
@@ -14,7 +14,7 @@ public class Circle extends Shape {
      */
     @Override
     public double calculateArea() {
-        return Math.PI * Math.pow(radio, 2);
+        return Math.PI * Math.pow(this.radio, 2);
     }
 
     /**
@@ -22,6 +22,6 @@ public class Circle extends Shape {
      */
     @Override
     public double calculatePerimeter() {
-        return 2 * Math.PI * radio;
+        return 2 * Math.PI * this.radio;
     }
 }
