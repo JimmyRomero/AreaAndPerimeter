@@ -16,7 +16,7 @@ public class Rectangle implements Shape {
      */
     @Override
     public double calculateArea() {
-        return this.sideA * sideB;
+        return this.sideA * this.sideB;
     }
 
     /**

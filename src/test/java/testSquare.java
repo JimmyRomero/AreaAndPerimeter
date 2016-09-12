@@ -13,7 +13,7 @@ public class testSquare {
 
     private Shape shape;
 
-    @Before
+    @Before 
     public void setUp() {
         double side = 4;
         shape = new Square(side);

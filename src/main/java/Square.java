@@ -1,27 +1,14 @@
 /**
  * Created by JimmyRomero on 8/24/2016.
  */
-public class Square implements Shape {
+public class Square extends Rectangle {
 
-    private final double side;
-
+    /**
+     *Constructor for square object.
+     *
+     * @param side The side of the square.
+     */
     public Square(double side) {
-        this.side = side;
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public double calculateArea() {
-        return this.side * this.side;
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public double calculatePerimeter() {
-        return 4 * this.side;
+        super(side, side);
     }
 }
